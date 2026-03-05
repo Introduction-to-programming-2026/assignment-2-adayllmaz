@@ -1,14 +1,19 @@
-#include <cs50.h>
 #include <ctype.h>
 #include <stdio.h>
 #include <string.h>
 
 int main(void)
 {
-    string s = get_string("Before: ");
+    char s[100];
+    printf("Before: ");
+    scanf("%s", s);
+
     printf("After: ");
 
-    // TODO: loop through the string and print toupper(...) for each char
+    for (int i = 0; s[i] != '\0'; i++)
+    {
+        printf("%c", touper(s[i]));
+    }
 
     printf("\n");
 }
